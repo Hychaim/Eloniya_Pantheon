@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="1536" height="1500" viewBox="0 10 200 200">
+  <defs>
+    <clipPath id="shield_996771913">
+      <path d="m25,25 h150 v50 a150,150,0,0,1,-75,125 a150,150,0,0,1,-75,-125 z"/>
+    </clipPath>
+    <clipPath id="division_996771913">
+      <rect x="100" y="0" width="100" height="200"/>
+    </clipPath>
+    <linearGradient id="luster" x1="0%" y1="100%" x2="95%" y2="10%">
+      <stop stop-color="#000" stop-opacity=".3" offset="0"/>
+      <stop stop-color="#ccc" stop-opacity="0" offset=".8"/>
+      <stop stop-color="#fff" stop-opacity=".2" offset="1"/>
+    </linearGradient>
+    <pattern id="honeycombed-or-sable-smaller" width="0.0715" height="0.12257" viewBox="0 0 70 120">
+      <rect width="70" height="120" fill="#ffe066"/>
+      <path d="M 70,0 V 20 L 35,40 m 35,80 V 100 L 35,80 M 0,120 V 100 L 35,80 V 40 L 0,20 V 0" stroke="#333333" fill="none" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <g clip-path="url(#shield_996771913)">
+    <rect class="field" x="0" y="0" width="200" height="200" fill="url(#honeycombed-or-sable-smaller)"/>
+    <g class="division" clip-path="url(#division_996771913)">
+      <rect x="0" y="0" width="200" height="200" fill="#522d5b"/>
+    </g>
+    <g class="ordinary" i="0" fill="#377cd7" stroke="none" stroke-width="1">
+      <polygon points="70,0 100,175 130,0"/>
+    </g>
+  </g>
+  <path class="grad" d="m25,25 h150 v50 a150,150,0,0,1,-75,125 a150,150,0,0,1,-75,-125 z" fill="url(#luster)" stroke="#333333" stroke-width="1" style="pointer-events: none;"/>
+</svg>

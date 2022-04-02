@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="1536" height="1500" viewBox="0 0 200 200">
+  <defs>
+    <clipPath id="shield_291655551">
+      <path d="m 185,100 a 85,85 0 0 1 -85,85 85,85 0 0 1 -85,-85 85,85 0 0 1 85,-85 85,85 0 0 1 85,85"/>
+    </clipPath>
+    <radialGradient id="spotlight" cx="35%" cy="35%" r="100%">
+      <stop stop-color="#fff" stop-opacity=".3" offset="0"/>
+      <stop stop-color="#fff" stop-opacity=".15" offset=".2"/>
+      <stop stop-color="#000" stop-opacity="0" offset=".7"/>
+    </radialGradient>
+    <g stroke-width=".5" id="goutte" author="Azgaar" license="https://creativecommons.org/publicdomain/zero/1.0">
+      <path d="M100 134c17-1 16-19 10-25-1.9-1.8-4.6-5.3-3.9-8.1C108 94 102 90 102 87c-1-7 3-7 3-13-.1-6.2-3.3-8.7-6-12 1.2 3 2 6 1 9-1.5 5.9-6.2 6.9-8 11-2 5 3 11 3 15-.6 9.1-9 13-9 23 .3 11.3 9 14 14 14z"/>
+    </g>
+    <g id="sun" author="Azgaar" license="https://creativecommons.org/publicdomain/zero/1.0">
+      <path stroke-width=".5" d="M84.7 63c-1 3.9.1 7.1 2 10.1 1.5 2.3 2.4 4.8 2.4 7.5-.7.4-1.3.8-1.9 1.2L71.8 71.7l10.4 15.2c-.2.3-.4.5-.5.8-2.9-1.3-5.7-1.6-8.3-1.1-3.7.7-6.9-.1-10.2-2 2.1 3.5 5.1 5 8.6 5.7 2.7.6 5.1 1.7 7 3.6-.2.7-.4 1.5-.5 2.2l-18.1 3.7 18.1 3.5c0 .3.1.6.2.9-3 1.1-5.2 2.9-6.6 5.1-2.1 3.1-4.9 4.8-8.6 5.8 3.9 1 7.1-.1 10.1-2 2.3-1.5 4.8-2.4 7.5-2.4.4.7.8 1.3 1.2 1.9l-10.3 15.5 15.3-10.4c.3.2.5.4.8.5-1.3 2.9-1.6 5.7-1.1 8.3.7 3.7-.1 6.8-2 10.1 3.5-2.1 5-5.1 5.7-8.6.6-2.7 1.7-5.1 3.6-7 .7.2 1.5.4 2.2.5l3.7 18.1 3.5-18.1c.3 0 .6-.1.9-.2 1.1 3 2.9 5.2 5.1 6.6 3.1 2.1 4.8 4.9 5.8 8.6 1-3.9-.1-7.1-2-10.1-1.5-2.3-2.4-4.8-2.4-7.5.7-.4 1.3-.8 1.9-1.2l15.4 10.2-10.4-15.3c.2-.3.4-.5.5-.8 2.9 1.3 5.7 1.6 8.3 1.1 3.7-.7 6.8.1 10.1 2-2.1-3.5-5.1-4.9-8.6-5.7-2.7-.6-5.1-1.7-7-3.6.2-.7.4-1.5.5-2.2l18.1-3.7-18.1-3.5c0-.3-.1-.6-.2-.9 3-1.1 5.2-2.9 6.6-5.1 2.1-3.1 4.9-4.8 8.6-5.7-3.9-1-7.1.1-10.1 2-2.3 1.5-4.8 2.4-7.5 2.4-.4-.7-.8-1.3-1.2-1.9L128 71.6l-15.3 10.3c-.3-.2-.5-.4-.8-.5 1.3-2.9 1.6-5.7 1.1-8.3-.7-3.7.1-6.9 2-10.2-3.5 2.1-4.9 5.1-5.7 8.6-.6 2.7-1.7 5.2-3.7 7-.7-.2-1.5-.4-2.2-.5L100 60l-3.5 18.1c-.3 0-.6.1-.9.2-1.1-3-2.9-5.2-5.1-6.6-3.1-2.1-4.8-4.9-5.7-8.6z"/>
+    </g>
+    <g id="mullet6Faceted" author="Azgaar" license="https://creativecommons.org/publicdomain/zero/1.0">
+      <path d="M100 60l7.64 26.77 26-6.77-18.36 20 19.36 20-27-6.77L100 140l-7.64-26.77-27 6.77 19.36-20-19.36-20 27 6.77z"/>
+      <path fill="#000" fill-opacity=".2" stroke-width=".2" d="M100 100l34-20-18.72 20H100l34.64 20-27-6.77L100 100v40l-7.64-26.77L100 100l-34.64 20 19.36-20H100L65.36 80l27 6.77L100 100V60l7.64 26.77z"/>
+    </g>
+  </defs>
+  <g clip-path="url(#shield_291655551)">
+    <rect class="field" x="0" y="0" width="200" height="200" fill="#333333"/>
+    <g class="charge" i="0" charge="goutte" fill="#85185b" transform="translate(8 -8) rotate(45 100 100)" stroke="#000">
+      <use xlink:href="#goutte" transform="translate(-80 -80) scale(1.8)"/>
+    </g>
+    <g class="charge" i="1" charge="sun" fill="#85185b" transform="translate(24 -24)" stroke="#000">
+      <use xlink:href="#sun" transform="translate(-70 10) scale(1.3)"/>
+    </g>
+    <g class="charge" i="2" charge="mullet6Faceted" fill="#ffe066" transform="translate(38 0) rotate(30 100 100)" stroke="#000">
+      <use xlink:href="#mullet6Faceted" transform="translate(6 86) scale(0.54)"/>
+    </g>
+    <g class="charge" i="3" charge="mullet6Faceted" fill="#ffe066" transform="translate(24 -25)" stroke="#000">
+      <use xlink:href="#mullet6Faceted" transform="translate(2 82) scale(0.58)"/>
+    </g>
+  </g>
+  <path class="grad" d="m 185,100 a 85,85 0 0 1 -85,85 85,85 0 0 1 -85,-85 85,85 0 0 1 85,-85 85,85 0 0 1 85,85" fill="url(#spotlight)" stroke="#333333" stroke-width="1" style="pointer-events: none;"/>
+</svg>

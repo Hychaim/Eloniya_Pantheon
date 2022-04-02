@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="1536" height="1500" viewBox="0 0 200 200">
+  <defs>
+    <clipPath id="shield_551733570">
+      <path d="m 185,100 a 85,85 0 0 1 -85,85 85,85 0 0 1 -85,-85 85,85 0 0 1 85,-85 85,85 0 0 1 85,85"/>
+    </clipPath>
+    <radialGradient id="spotlight" cx="35%" cy="35%" r="100%">
+      <stop stop-color="#fff" stop-opacity=".3" offset="0"/>
+      <stop stop-color="#fff" stop-opacity=".15" offset=".2"/>
+      <stop stop-color="#000" stop-opacity="0" offset=".7"/>
+    </radialGradient>
+    <g id="crescent" stroke-width=".5" author="Azgaar" license="https://creativecommons.org/publicdomain/zero/1.0">
+      <path d="M84 65c-32 15-24 68 16 68s48-53 16-68c18 20 2 41-16 41S67 85 84 65z"/>
+      <path fill="none" d="M84 65c-26 15-14 56 16 56s42-41 16-56"/>
+    </g>
+  </defs>
+  <g clip-path="url(#shield_551733570)">
+    <rect class="field" x="0" y="0" width="200" height="200" fill="#ffe066"/>
+    <g class="charge" i="0" charge="crescent" fill="#522d5b" stroke="#000">
+      <use xlink:href="#crescent" transform="translate(-5.5 -5.5) scale(0.7)"/>
+      <use xlink:href="#crescent" transform="translate(65.5 -5.5) scale(0.7)"/>
+      <use xlink:href="#crescent" transform="translate(30 67.5) scale(0.7)"/>
+    </g>
+  </g>
+  <path class="grad" d="m 185,100 a 85,85 0 0 1 -85,85 85,85 0 0 1 -85,-85 85,85 0 0 1 85,-85 85,85 0 0 1 85,85" fill="url(#spotlight)" stroke="#333333" stroke-width="1" style="pointer-events: none;"/>
+</svg>

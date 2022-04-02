@@ -1,0 +1,244 @@
+/* FONTS */
+
+h2 {
+    /* Fix Font Shrink Chrome Issue on hover of elements */
+    transform: translateZ(0);
+}
+
+@font-face {
+    font-family: Abeezee;
+    src: url("fonts/ABeeZee/ABeeZee-Regular.ttf");
+}
+
+@font-face {
+    font-family: Averia;
+    src: url("fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf");
+}
+
+@font-face {
+    font-family: Nyrasil;
+    src: url("fonts/Alamak.ttf");
+}
+
+@font-face {
+    font-family: Fondamento;
+    src: url('fonts/Fondamento-Regular.ttf');
+}
+
+.nyrasil {
+    font-family: Nyrasil;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transform: scale(1.6, 1.2) translateY(0.06em) translateZ(0);
+}
+
+@font-face {
+    font-family: Aizzia;
+    src: url("fonts/BluuNext-Bold.otf");
+}
+
+.aizzia {
+    font-family: Aizzia;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transform: scale(1.8, 1.4) translateZ(0);
+}
+
+@font-face {
+    font-family: Ondon;
+    src: url("fonts/Roman\ SD.ttf");
+}
+
+.ondon {
+    font-family: Ondon;
+    letter-spacing: 0.05em;
+    transform: scale(1.4) translateZ(0);
+}
+
+@font-face {
+    font-family: Lynis;
+    src: url("fonts/karasha.regular.ttf");
+}
+
+.lynis {
+    font-family: Lynis;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transform: scale(2, 1.4) translateY(0.0em) translateZ(0);
+}
+
+@font-face {
+    font-family: Hateus;
+    src: url("fonts/KleinsBrokenGotik.ttf");
+}
+
+.hateus {
+    font-family: Hateus;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transform: scale(1.6, 1.2) translateZ(0);
+}
+
+@font-face {
+    font-family: Dadroz;
+    src: url("fonts/Heretic.ttf");
+}
+
+.dadroz {
+    font-family: Dadroz;
+    letter-spacing: 0.25em;
+    transform: scale(1.2, 1) translateY(0.05em) translateZ(0);
+}
+
+@font-face {
+    font-family: Phara;
+    src: url("fonts/Bulgaria\ Moderna\ V3.otf");
+}
+
+.phara {
+    font-family: Phara;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transform: scale(1.8, 1.4) translateZ(0);
+}
+
+@font-face {
+    font-family: Inanis;
+    src: url("fonts/MoonyCat_Custom.ttf");
+}
+
+.inanis {
+    font-family: Inanis;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transform: scale(1.8) translateY(-0.02em) translateZ(0);
+}
+
+@font-face {
+    font-family: Arkoneth;
+    src: url("fonts/samedi.ttf");
+}
+
+.arkoneth {
+    font-family: Arkoneth;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transform: scale(1.3) translateY(0.05em) translateZ(0);
+}
+
+@font-face {
+    font-family: WelaoJunta;
+    src: url("fonts/JANGKUY-RegularExpanded.otf");
+}
+
+.welao-junta {
+    font-family: WelaoJunta;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transform: scale(1, 1.2) translateY(0.1em) translateZ(0);
+    white-space: nowrap;
+}
+
+@font-face {
+    font-family: Gheelia;
+    src: url("fonts/ChelaOne-Regular.ttf");
+}
+
+.gheelia {
+    font-family: Gheelia;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transform: scale(2, 1.6) translateY(0.05em) translateZ(0);
+}
+
+@font-face {
+    font-family: UzGoroth;
+    src: url("fonts/bogbeastexpand.ttf");
+}
+
+.uz-goroth {
+    font-family: UzGoroth;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transform: scale(1.8, 1.2) translateY(0.05em);
+}
+
+@font-face {
+    font-family: Ithronel;
+    src: url("fonts/RabbitMoon-Close_Custom.ttf");
+}
+
+.ithronel {
+    font-family: Ithronel;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transform: scale(2.2, 1.8) translateY(-0.02em) translateZ(0);
+}
+
+@font-face {
+    font-family: Sulama;
+    src: url("fonts/MagmaWave\ Caps.otf");
+}
+
+.sulama {
+    font-family: Sulama;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transform: scale(2, 1.4) translateZ(0);
+}
+
+@font-face {
+    font-family: NoxolItzi;
+    src: url("fonts/PRINP___.ttf");
+}
+
+.noxol-itzi {
+    font-family: NoxolItzi;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transform: scale(1.2, 1) translateY(00em) translateZ(0);
+}
+
+@font-face {
+    font-family: Ilumiya;
+    src: url("fonts/dhe\ wood.ttf");
+}
+
+.ilumiya {
+    font-family: Ilumiya;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transform: scale(2, 1.6) translateZ(0);
+}
+
+@font-face {
+    font-family: Ayarbi;
+    src: url('fonts/ARABOLIC.TTF');
+}
+
+.ayarbi {
+    font-family: Ayarbi;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transform: scale(1.8, 1.2) translateZ(0);
+}
+
+@font-face {
+    font-family: Azgonod;
+    src: url('fonts/the-grim-raiders.regular.ttf');
+}
+
+.azgonod {
+    font-family: Azgonod;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    transform: scale(2, 1.4) translateY(0.2em) translateZ(0);
+}
