@@ -15,22 +15,22 @@ const nextBtn = document.getElementById('next');
 
 // Colors
 const aizziaClr = ['#343959', '#1A1826'];
-const nyrasilClr = ['#F2E96B', '#5E8C18'];
-const ondonClr = ['#BF7F30', '#733702'];
-const lynisClr = ['#400336', '#260D1B']; // ['#D93D76', '#400336']
-const hateusClr = ['#80516E', '#60172F'];
+const nyrasilClr = ['#a7c957', '#2a552c'];
+const ondonClr = ['#8c5503', '#592B02']; //['#BF7F30', '#733702'];
+const lynisClr = ['#400336', '#260D1B'];
+const hateusClr = ['#80516E', '#3e0f1e']; //['#80516E', '#60172F']
 const dadrozClr = ['#23594F', '#0D0D0D'];
-const pharaClr = ['#48358C', '#252140'];
-const inanisClr = ['#023059', '#012840'];
+const pharaClr = ['#533C73', '#252140']; //['#48358C', '#252140']
+const inanisClr = ['#023059', '#011f32']; //['#023059', '#012840'];
 const arkonethClr = ['#590202', '#260101'];
-const welaojuntaClr = ['#211159', '#1D1340'];
-const gheeliaClr = ['#D92525', '#A61F1F'];
-const uzgorothClr = ['#40590A', '#402B12'];
-const ithronelClr = ['#59163B', '#0F0826'];
-const sulamaClr = ['#2E4E8C', '#253759'];
-const noxolitziClr = ['#A65D33', '#403E29'];
+const welaojuntaClr = ['#674057', '#1D1340']; //['#211159', '#1D1340']
+const gheeliaClr = ['#8c351b', '#701815'];
+const uzgorothClr = ['#40590A', '#281b0b']; //['#40590A', '#402B12']
+const ithronelClr = ['#834457', '#311b2d']; //['#59163B', '#0F0826']
+const sulamaClr = ['#387dad', '#253759']; //['#2E4E8C', '#253759']
+const noxolitziClr = ['#c6c9ac', '#274f17'];
 const ilumiyaClr = ['#3B4F8C', '#152340'];
-const ayarbiClr = ['#735B46', '#242610'];
+const ayarbiClr = ['#998153', '#40271c'];
 const azgonodClr = ['#26010F', '#000214'];
 
 // Arange the illusSlides next to one another
@@ -47,7 +47,7 @@ window.onload = illusSlides.forEach(SetSlidePosition);
 window.onload = blazonsSlides.forEach(SetSlidePosition);
 
 const moveToSlide = (currentSlideIndex, targetSlideIndex) => {
-    changeBgColor(names[targetSlideIndex].innerText.toLowerCase().replace(/['"\s]+/g, ''));
+    changeBgColor(names[currentSlideIndex].innerText.toLowerCase().replace(/['"\s]+/g, ''), names[targetSlideIndex].innerText.toLowerCase().replace(/['"\s]+/g, ''));
 
     illusSlides[targetSlideIndex].style.transform = 'translateX(0px)';
     illusSlides[currentSlideIndex].style.transform = 'translateX(' + illusSlideWidth + 'px)';
@@ -114,10 +114,47 @@ stepbarNav.addEventListener('click', e => {
     updateStepItem(currentStepItem, targetStepItem);
 });
 
-function changeBgColor(curretnName, targetName) {
-    colors = eval(name + "Clr");
+function changeBgColor(currentName, targetName) {
+    currentRGB = [hexToRgb(eval(currentName + "Clr")[0]), hexToRgb(eval(currentName + "Clr")[1])];
+    targetRGB = [hexToRgb(eval(targetName + "Clr")[0]), hexToRgb(eval(targetName + "Clr")[1])];
     let root = document.documentElement;
 
-    root.style.setProperty('--clr-primary', colors[0]);
-    root.style.setProperty('--clr-primary-dark', colors[1]);
+    var handle;
+
+    function varyColorValues() {
+        currentRGB[0].r = increaseOrDecrease(currentRGB[0].r, targetRGB[0].r);
+        currentRGB[0].g = increaseOrDecrease(currentRGB[0].g, targetRGB[0].g);
+        currentRGB[0].b = increaseOrDecrease(currentRGB[0].b, targetRGB[0].b);
+
+        currentRGB[1].r = increaseOrDecrease(currentRGB[1].r, targetRGB[1].r);
+        currentRGB[1].g = increaseOrDecrease(currentRGB[1].g, targetRGB[1].g);
+        currentRGB[1].b = increaseOrDecrease(currentRGB[1].b, targetRGB[1].b);
+
+        root.style.setProperty('--clr-primary', `rgb(${currentRGB[0].r}, ${currentRGB[0].g}, ${currentRGB[0].b})`);
+        root.style.setProperty('--clr-primary-dark', `rgb(${currentRGB[1].r}, ${currentRGB[1].g}, ${currentRGB[1].b})`);
+
+        if (JSON.stringify(currentRGB) === JSON.stringify(targetRGB)) {
+            window.clearInterval(handle);
+        }
+    }
+
+    if (currentRGB[0] && currentRGB[1] && targetRGB[0] && targetRGB[1]) {
+        handle = window.setInterval(function() { varyColorValues() }, 4); // Run each 50ms
+    }
+}
+
+function increaseOrDecrease(number, target) {
+    if (number !== target) {
+        number < target ? number += 1 : number -= 1;
+    }
+    return number;
+}
+
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
 }
