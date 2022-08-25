@@ -131,7 +131,7 @@ function changeBgColor(currentName, targetName) {
         currentRGB[1].b = increaseOrDecrease(currentRGB[1].b, targetRGB[1].b);
 
         root.style.setProperty('--clr-primary', `rgb(${currentRGB[0].r}, ${currentRGB[0].g}, ${currentRGB[0].b})`);
-        root.style.setProperty('--clr-primary-dark', `rgb(${currentRGB[1].r}, ${currentRGB[1].g}, ${currentRGB[1].b})`);
+        root.style.setProperty('--clr-secondary', `rgb(${currentRGB[1].r}, ${currentRGB[1].g}, ${currentRGB[1].b})`);
 
         if (JSON.stringify(currentRGB) === JSON.stringify(targetRGB)) {
             window.clearInterval(handle);

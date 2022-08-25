@@ -4,9 +4,9 @@
 
 :root {
     /* Colors */
-    --clr-primary-light: #E7E7E7;
+    --clr-light: #e7e7e7;
     --clr-primary: #343959;
-    --clr-primary-dark: #1a1826;
+    --clr-secondary: #1a1826;
     --clr-neutral: #e7e7e7;
     --clr-accent: hsl(41, 86%, 63%);
     --clr-accent-dark: hsl(40, 78%, 16%);
@@ -32,11 +32,6 @@
 
 html {
     font-size: 10px;
-    background: linear-gradient( 145deg, var(--clr-primary) 0%, var(--clr-primary-dark) 50%);
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100%;
-    transition: opacity 0.1s ease;
 }
 
 *,
@@ -52,6 +47,10 @@ html {
 }
 
 body {
+    background: linear-gradient( 145deg, var(--clr-primary) 0%, var(--clr-secondary) 50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
     color: var(--clr-neutral);
     font-family: var(--ff-body);
     overflow-x: hidden;
@@ -90,6 +89,7 @@ a {
     grid-column: 1;
     line-height: 1.3em;
     font-size: var(--fs-primary-heading);
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transition: opacity 0.4s cubic-bezier(0.55, 0.06, 0.68, 0.19);
 }
@@ -238,13 +238,13 @@ li[class*="__slide"] {
 .step-bar li:not(.current-slide):hover:before,
 .step-bar li:not(.current-slide):focus-within:before {
     transform: scale(0.9);
-    box-shadow: inset 0 0 1em var(--clr-primary-dark);
+    box-shadow: inset 0 0 1em var(--clr-secondary);
 }
 
 .step-bar li.current-slide {
     font-size: var(--fs-400);
     color: var(--clr-accent);
-    text-shadow: 0px 0px 10px var(--clr-primary-dark);
+    text-shadow: 0px 0px 10px var(--clr-secondary);
     transform: scale(1.2);
 }
 
@@ -252,7 +252,7 @@ li[class*="__slide"] {
     border: clamp(2px, 0.1em, 3px) solid var(--clr-accent);
     border-color: var(--clr-accent);
     background-size: 100% 100%;
-    box-shadow: inset 0 0 1em var(--clr-primary-dark);
+    box-shadow: inset 0 0 1em var(--clr-secondary);
 }
 
 .arrows {
@@ -266,8 +266,8 @@ li[class*="__slide"] {
     margin-top: 1em;
     border: clamp(2px, 0.2vw, 4px) solid var(--clr-accent);
     border-radius: 50%;
-    background-color: var(--clr-primary-light);
-    box-shadow: inset 0 0 1em var(--clr-primary-light);
+    background-color: var(--clr-light);
+    box-shadow: inset 0 0 1em var(--clr-light);
     transition: all 0.3s;
 }
 
