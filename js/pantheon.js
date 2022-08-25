@@ -1,6 +1,36 @@
 console.log("WIDTH: ", window.innerWidth, "HEIGHT: ", window.innerHeight);
 console.log("Ratio: ", window.innerWidth / window.innerHeight);
 
+const root = document.documentElement;
+const loader = document.getElementById('loader');
+
+rotateBg();
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        loader.classList.add('fade-out')
+    }, 3000);
+})
+
+function rotateBg() {
+    var handle;
+
+    function increaseDegreeValue() {
+        degree = root.style.getPropertyValue('--degree').substring(0, root.style.getPropertyValue('--degree').length - 3);
+        console.log(degree);
+        degree++;
+        root.style.setProperty('--degree', degree + 'deg');
+
+        if (loader.classList.contains('fade-out')) {
+            setTimeout(() => {
+                window.clearInterval(handle);
+            }, 500);
+        }
+    }
+
+    handle = window.setInterval(function() { increaseDegreeValue() }, 50);
+}
+
 const illusTrack = document.querySelector('.illus__track');
 const illusSlides = Array.from(illusTrack.children);
 const blazonsTrack = document.querySelector('.blazons__track');
@@ -117,7 +147,6 @@ stepbarNav.addEventListener('click', e => {
 function changeBgColor(currentName, targetName) {
     currentRGB = [hexToRgb(eval(currentName + "Clr")[0]), hexToRgb(eval(currentName + "Clr")[1])];
     targetRGB = [hexToRgb(eval(targetName + "Clr")[0]), hexToRgb(eval(targetName + "Clr")[1])];
-    let root = document.documentElement;
 
     var handle;
 
