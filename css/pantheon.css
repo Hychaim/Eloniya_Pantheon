@@ -5,8 +5,8 @@
 :root {
     /* Colors */
     --clr-primary-light: hsl(218, 100%, 71%);
-    --clr-primary: hsl(218, 87%, 63%);
-    --clr-primary-dark: hsl(218, 64%, 40%);
+    --clr-primary: #343959;
+    --clr-primary-dark: #1a1826;
     --clr-neutral: #e7e7e7;
     --clr-accent: hsl(41, 86%, 63%);
     --clr-accent-dark: hsl(40, 78%, 16%);
@@ -32,10 +32,11 @@
 
 html {
     font-size: 10px;
-    background: linear-gradient(145deg, var(--clr-primary) 0%, var(--clr-primary-dark) 50%);
+    background: linear-gradient( 145deg, var(--clr-primary) 0%, var(--clr-primary-dark) 50%);
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100%;
+    transition: opacity 0.1s ease;
 }
 
 *,

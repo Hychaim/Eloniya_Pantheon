@@ -13,9 +13,25 @@ const stepbarItems = Array.from(document.querySelector('.step-bar>ul').children)
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 
-console.log('Names : ', names);
-console.log('Titles : ', titles);
-console.log('Descriptions : ', descriptions);
+// Colors
+const aizziaClr = ['#343959', '#1A1826'];
+const nyrasilClr = ['#F2E96B', '#5E8C18'];
+const ondonClr = ['#BF7F30', '#733702'];
+const lynisClr = ['#400336', '#260D1B']; // ['#D93D76', '#400336']
+const hateusClr = ['#80516E', '#60172F'];
+const dadrozClr = ['#23594F', '#0D0D0D'];
+const pharaClr = ['#48358C', '#252140'];
+const inanisClr = ['#023059', '#012840'];
+const arkonethClr = ['#590202', '#260101'];
+const welaojuntaClr = ['#211159', '#1D1340'];
+const gheeliaClr = ['#D92525', '#A61F1F'];
+const uzgorothClr = ['#40590A', '#402B12'];
+const ithronelClr = ['#59163B', '#0F0826'];
+const sulamaClr = ['#2E4E8C', '#253759'];
+const noxolitziClr = ['#A65D33', '#403E29'];
+const ilumiyaClr = ['#3B4F8C', '#152340'];
+const ayarbiClr = ['#735B46', '#242610'];
+const azgonodClr = ['#26010F', '#000214'];
 
 // Arange the illusSlides next to one another
 var illusSlideWidth = illusSlides[0].getBoundingClientRect().width;
@@ -31,6 +47,8 @@ window.onload = illusSlides.forEach(SetSlidePosition);
 window.onload = blazonsSlides.forEach(SetSlidePosition);
 
 const moveToSlide = (currentSlideIndex, targetSlideIndex) => {
+    changeBgColor(names[targetSlideIndex].innerText.toLowerCase().replace(/['"\s]+/g, ''));
+
     illusSlides[targetSlideIndex].style.transform = 'translateX(0px)';
     illusSlides[currentSlideIndex].style.transform = 'translateX(' + illusSlideWidth + 'px)';
     illusSlides[currentSlideIndex].classList.remove('current-slide');
@@ -41,9 +59,9 @@ const moveToSlide = (currentSlideIndex, targetSlideIndex) => {
     blazonsSlides[currentSlideIndex].classList.remove('current-slide');
     blazonsSlides[targetSlideIndex].classList.add('current-slide');
 
-    updatetext(names, currentSlideIndex, targetSlideIndex);
-    updatetext(titles, currentSlideIndex, targetSlideIndex);
-    updatetext(descriptions, currentSlideIndex, targetSlideIndex);
+    toggleCurrentSlide(names, currentSlideIndex, targetSlideIndex);
+    toggleCurrentSlide(titles, currentSlideIndex, targetSlideIndex);
+    toggleCurrentSlide(descriptions, currentSlideIndex, targetSlideIndex);
 }
 
 const updateStepItem = (currentStepItem, targetStepItem) => {
@@ -51,7 +69,7 @@ const updateStepItem = (currentStepItem, targetStepItem) => {
     targetStepItem.classList.add('current-slide');
 }
 
-const updatetext = (textList, currentSlideIndex, targetSlideIndex) => {
+const toggleCurrentSlide = (textList, currentSlideIndex, targetSlideIndex) => {
     textList[currentSlideIndex].classList.remove('current-slide');
     textList[targetSlideIndex].classList.add('current-slide');
 }
@@ -93,8 +111,13 @@ stepbarNav.addEventListener('click', e => {
 
     moveToSlide(illusSlides.findIndex(illusSlide => illusSlide === currentSlide),
         illusSlides.findIndex(illusSlide => illusSlide === targetSlide));
-    updateStepItem(currentStepItem, targetStepItem)
+    updateStepItem(currentStepItem, targetStepItem);
 });
 
+function changeBgColor(curretnName, targetName) {
+    colors = eval(name + "Clr");
+    let root = document.documentElement;
 
-// console.log('DEBUG : ', track);
+    root.style.setProperty('--clr-primary', colors[0]);
+    root.style.setProperty('--clr-primary-dark', colors[1]);
+}
