@@ -3,8 +3,9 @@ console.log("Ratio: ", window.innerWidth / window.innerHeight);
 
 const root = document.documentElement;
 const loader = document.getElementById('loader');
+const rays = document.querySelector('#loader .rays');
 
-rotateBg();
+rotateRays();
 
 window.addEventListener('load', () => {
     setTimeout(() => {
@@ -12,14 +13,15 @@ window.addEventListener('load', () => {
     }, 3000);
 })
 
-function rotateBg() {
+function rotateRays() {
     var handle;
 
-    function increaseDegreeValue() {
-        degree = root.style.getPropertyValue('--degree').substring(0, root.style.getPropertyValue('--degree').length - 3);
+    let degree = 0;
+
+    function increaseRotation() {
         console.log(degree);
         degree++;
-        root.style.setProperty('--degree', degree + 'deg');
+        rays.style.transform = 'rotate(' + degree + 'deg)';
 
         if (loader.classList.contains('fade-out')) {
             setTimeout(() => {
@@ -28,7 +30,7 @@ function rotateBg() {
         }
     }
 
-    handle = window.setInterval(function() { increaseDegreeValue() }, 50);
+    handle = window.setInterval(function() { increaseRotation() }, 50);
 }
 
 const illusTrack = document.querySelector('.illus__track');
